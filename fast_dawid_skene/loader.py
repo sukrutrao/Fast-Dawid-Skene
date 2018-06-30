@@ -78,8 +78,6 @@ class DataLoader:
 
         self.filter_data()
 
-        print(self.filtered_crowd_df)
-
         if self.mode == 'test':
             if ground_truths_path is not None:
                 self.gt_path = ground_truths_path
