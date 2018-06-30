@@ -105,3 +105,6 @@ venv.bak/
 
 # results
 results/
+
+# docs
+docs/

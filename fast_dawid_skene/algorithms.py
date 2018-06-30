@@ -27,7 +27,7 @@ def main(args, data, gold=None):
     Run the EM estimator on the data passed as the parameter
 
     Args:
-        args: Arguments, must contain mode whose value should be one 
+        args: Arguments, must contain algorithm whose value should be one 
             among ['FDS','DS','H','MV']
             And should contain verbose whose value should be either True or False
         data: a dictionary object of crwod-sourced responses:
@@ -39,7 +39,7 @@ def main(args, data, gold=None):
         acc: Accuracy of the estimated labels if gold was specified
     """
 
-    assert args.mode in ['FDS', 'DS', 'H', 'MV'], 'Invalid mode'
+    assert args.algorithm in ['FDS', 'DS', 'H', 'MV'], 'Invalid algorithm'
 
     result = run(data, args=args)
 
@@ -58,7 +58,7 @@ def run(responses, args, tol=0.0001, CM_tol=0.005, max_iter=100):
     Args:
         responses: a dictionary object of responses:
             {questions: {participants: [labels]}}
-        args: Must contain mode whose value should be 
+        args: Must contain algorithm whose value should be 
             one among ['FDS','DS','H','MV']
             'FDS': use for FDS algorithm
             'DS': use for original DS algorithm
@@ -66,7 +66,7 @@ def run(responses, args, tol=0.0001, CM_tol=0.005, max_iter=100):
             'MV': use for Majority Voting
             And should contain verbose whose value should be either True or False
         tol: threshold for class marginals for convergence of the algorithm
-        CM_tol: threshold for class marginals for switiching to 'hard' mode
+        CM_tol: threshold for class marginals for switching to 'hard' mode
             in Hybrid algorithm. Has no effect for FDS or DS
         max_iter: maximum number of iterations of EM
 
@@ -74,7 +74,7 @@ def run(responses, args, tol=0.0001, CM_tol=0.005, max_iter=100):
         The estimated label for each question: [nQuestions]
     """
 
-    mode = args.mode
+    mode = args.algorithm
 
     # convert responses to counts
     (questions, participants, classes, counts) = responses_to_counts(responses)
