@@ -57,6 +57,9 @@ This code is provided under the [MIT License](LICENSE).
 
 Some parts of the code in [this file](fast_dawid_skene/algorithms.py) are derived from [this implementation](https://github.com/dallascard/dawid_skene), and the original license and copyright notice can be found at the top of the file.
 
+## Acknowledgements
+Parts of the code for the implementation of the algorithms use or derive from code in [this implementation](https://github.com/dallascard/dawid_skene).
+
 ## References
 
 1. A. P. Dawid and A. M. Skene. 1979. Maximum Likelihood Estimation of Observer Error-Rates Using the EM Algorithm. J. Royal Stat. Soc. Series C 28, 1 (1979), 20–28.
