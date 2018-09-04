@@ -49,10 +49,10 @@ def main():
                         required=False, help='Sets the random seed. Default is 18')
     parser.add_argument('--output', default=None, type=str, required=False,
                         help='Path to write CSV output, output is not written if this is not set')
-    parser.add_argument('--print_result', default=False, type=bool, required=False,
+    parser.add_argument('--print_result', action='store_true',
                         help='Prints the predictions and accuracy to standard output, if set')
-    parser.add_argument('--v', '--verbose', default=False,
-                        type=bool, required=False, help='Run in verbose mode', dest='verbose')
+    parser.add_argument('-v', '--verbose', action='store_true',
+                        help='Run in verbose mode', dest='verbose')
     args = parser.parse_args()
     np.random.seed(args.seed)
     run(args)
