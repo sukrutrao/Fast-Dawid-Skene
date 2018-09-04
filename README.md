@@ -1,5 +1,5 @@
 # Fast Dawid-Skene
-[![Build Status](https://travis-ci.com/GoodDeeds/Fast-Dawid-Skene.svg?branch=master)](https://travis-ci.com/GoodDeeds/Fast-Dawid-Skene)
+[![Build Status](https://travis-ci.com/GoodDeeds/Fast-Dawid-Skene.svg?branch=dev)](https://travis-ci.com/GoodDeeds/Fast-Dawid-Skene)
 
 Implementation of the Fast Dawid-Skene and Hybrid algorithms described in the paper
 
