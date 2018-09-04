@@ -94,9 +94,14 @@ class DataLoader:
 
             self.gt_df['Question'] = self.gt_df[
                 'Question'].map(self.question_to_ind_dict)
+            assert ~self.gt_df['Question'].isnull().values.any(
+            ), "Mismatch in question IDs in annotations and ground truths!"
+
             # TODO - assumes all possible annotations appear in crowd data
             self.gt_df['Annotation'] = self.gt_df[
                 'Annotation'].map(self.annotation_to_ind_dict)
+            assert ~self.gt_df['Annotation'].isnull().values.any(
+            ), "Mismatch in annotation IDs in annotations and ground truths! Possible causes: a ground truth label does not appear anywhere in the crowd annotations."
 
     def create_val_to_ind_dicts(self, df_col):
         """
