@@ -33,8 +33,8 @@ def main():
         description='Run the Dawid-Skene, Fast Dawid-Skene, the Hybrid, or the Majority Voting Algorithm')
     parser.add_argument('--dataset', type=str, required=True,
                         help='Name of the dataset to use')
-    parser.add_argument('--k', type=int, required=True,
-                        help='Number of annotators to use. Each data point must have at least K annotators. If more annotators are available, the first K annotators are used')
+    parser.add_argument('--k', default=0, type=int, required=False,
+                        help='Number of annotators to use. Each data point must have at least K annotators. If more annotators are available, the first K annotators are used. If K = 0, then all available annotations for each data point are used. Default is 0')
     parser.add_argument('--algorithm', type=str, choices=['DS', 'FDS', 'H', 'MV'], required=True,
                         help='Algorithm to use - DS: Dawid-Skene, FDS: Fast-Dawid Skene, H: Hybrid, MV: Majority Voting')
     parser.add_argument('--mode', default='aggregate', type=str, choices=[
