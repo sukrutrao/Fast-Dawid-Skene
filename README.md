@@ -43,8 +43,12 @@ $ python scripts/fast_dawid_skene.py --help
 ### Example Run
 To run on the toy dataset, with two annotators per question, using the FDS algorithm to obtain predictions, use
 ```
-$ python scripts/fast_dawid_skene.py --dataset toy --k 2 --mode aggregate --algorithm FDS --print_result True
-``` 
+$ python scripts/fast_dawid_skene.py --dataset toy --k 2 --mode aggregate --algorithm FDS --print_result
+```
+To run using all available annotations for every question, using the FDS algorithm to obtain predictions, use 
+```
+$ python scripts/fast_dawid_skene.py --dataset toy --mode aggregate --algorithm FDS --print_result
+```
 
 ### Running tests
 Tests can be run using pytest, as,

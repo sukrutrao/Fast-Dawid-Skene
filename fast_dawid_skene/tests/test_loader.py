@@ -75,6 +75,9 @@ class TestLoader(object):
         l.set_k(1)
         assert l.k == 1
         assert len(l.filtered_crowd_df) == l.num_questions * l.k
+        l.set_k(0)
+        assert l.k == 0
+        assert len(l.filtered_crowd_df) == len(l.crowd_df)
 
     def test_loader_custom_dataset_path(self):
         current_dir = os.path.dirname(os.path.abspath(__file__))

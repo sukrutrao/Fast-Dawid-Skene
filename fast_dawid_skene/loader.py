@@ -47,8 +47,7 @@ class DataLoader:
             self.crowd_path = crowd_annotations_path
         else:
             self.crowd_path = os.path.join(self.data_path, 'crowd.csv')
-
-        assert self.k > 0, "Number of annotators must be a positive integer!"
+        assert self.k >= 0, "Number of annotators must be a positive integer, or 0 for allowing a variable number of annotators"
         assert os.path.exists(
             self.crowd_path), self.crowd_path + " does not exist!"
 
@@ -57,6 +56,7 @@ class DataLoader:
 
         self.min_annotators = self.crowd_df.groupby(
             'Question')['Annotator'].count().min()
+
         assert self.k <= self.min_annotators, "Some data points do not have " + \
             str(self.k) + " annotators!"
 
@@ -89,14 +89,14 @@ class DataLoader:
             self.gt_df = pd.read_csv(self.gt_path, names=[
                 'Question', 'Annotation'])
 
+            self.num_questions_gt = self.gt_df['Question'].nunique()
+            assert self.num_questions == self.num_questions_gt, "Mismatch in number of questions in annotations and ground truths!"
+
             self.gt_df['Question'] = self.gt_df[
                 'Question'].map(self.question_to_ind_dict)
             # TODO - assumes all possible annotations appear in crowd data
             self.gt_df['Annotation'] = self.gt_df[
                 'Annotation'].map(self.annotation_to_ind_dict)
-
-            self.num_questions_gt = self.gt_df['Question'].nunique()
-            assert self.num_questions == self.num_questions_gt, "Mismatch in number of questions in annotations and ground truths!"
 
     def create_val_to_ind_dicts(self, df_col):
         """
@@ -140,20 +140,26 @@ class DataLoader:
         Sets the number of annotators to use
 
         Args:
-            k: The number of annotators
+            k: The number of annotators. 0 for using all available annotations
 
         Raises:
-            AssertionError: If some questions have fewer than k annotations
+            AssertionError: If some questions have fewer than k annotations, or
+            if k < 0.
         """
-        assert k > 0 and k <= self.min_annotators, "Invalid value specified for k!"
+        assert k >= 0 and k <= self.min_annotators, "Invalid value specified for k!"
         self.k = k
         self.filter_data()
 
     def filter_data(self):
         """
-        Creates a filtered dataframe with first k annotations for each question
+        Creates a filtered dataframe with first k annotations for each question.
+        Does nothing if k = 0
         """
-        self.filtered_crowd_df = self.crowd_df.groupby('Question').head(self.k)
+        if self.k > 0:
+            self.filtered_crowd_df = self.crowd_df.groupby(
+                'Question').head(self.k)
+        else:
+            self.filtered_crowd_df = self.crowd_df
 
     def get_data(self):
         """
