@@ -1,11 +1,13 @@
 # Fast Dawid-Skene
-[![Build Status](https://travis-ci.com/GoodDeeds/Fast-Dawid-Skene.svg?branch=master)](https://travis-ci.com/GoodDeeds/Fast-Dawid-Skene)
+[![Build Status](https://travis-ci.com/GoodDeeds/Fast-Dawid-Skene.svg?branch=master)](https://travis-ci.com/GoodDeeds/Fast-Dawid-Skene) 
+[![GitHub](https://img.shields.io/github/license/GoodDeeds/Fast-Dawid-Skene.svg)](LICENSE)
+
+
+[![Paper](https://img.shields.io/badge/-Paper-blue.svg?longCache=true&style=flat)](http://sentic.net/wisdom2018sinha.pdf) [![arXiv](https://img.shields.io/badge/-arXiv-blue.svg?longCache=true&style=flat)](https://arxiv.org/abs/1803.02781) [![Code](https://img.shields.io/badge/-Code-blue.svg?longCache=true&style=flat)](https://github.com/GoodDeeds/Fast-Dawid-Skene) [![Supplementary Results](https://img.shields.io/badge/-Supplementary_Results-blue.svg?longCache=true&style=flat)](https://sites.google.com/view/fast-dawid-skene/supplementary-results)
 
 Implementation of the Fast Dawid-Skene and Hybrid algorithms described in the paper:
 
 Vaibhav B Sinha, Sukrut Rao, Vineeth N Balasubramanian. Fast Dawid-Skene: A Fast Vote Aggregation Scheme for Sentiment Classification. In Workshop on Issues of Sentiment Discovery and Opinion Mining (WISDOM) at the ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD) 2018, August 2018.
-
-[[Paper](http://sentic.net/wisdom2018sinha.pdf)][[arXiv Preprint](https://arxiv.org/abs/1803.02781)][[Code](https://github.com/GoodDeeds/Fast-Dawid-Skene)][[Supplementary Results](https://sites.google.com/view/fast-dawid-skene/supplementary-results)]
 
 Implementations of the Dawid-Skene (Dawid and Skene, 1979) and Majority Voting algorithms are also provided.
 
