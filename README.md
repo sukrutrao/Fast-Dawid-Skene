@@ -3,7 +3,7 @@
 [![GitHub](https://img.shields.io/github/license/GoodDeeds/Fast-Dawid-Skene.svg)](LICENSE)
 
 
-[![Paper](https://img.shields.io/badge/-Paper-blue.svg?longCache=true&style=flat)](http://sentic.net/wisdom2018sinha.pdf) [![arXiv](https://img.shields.io/badge/-arXiv-blue.svg?longCache=true&style=flat)](https://arxiv.org/abs/1803.02781) [![Code](https://img.shields.io/badge/-Code-blue.svg?longCache=true&style=flat)](https://github.com/GoodDeeds/Fast-Dawid-Skene) [![Supplementary Results](https://img.shields.io/badge/-Supplementary_Results-blue.svg?longCache=true&style=flat)](https://sites.google.com/view/fast-dawid-skene/supplementary-results)
+[Paper](http://sentic.net/wisdom2018sinha.pdf) | [arXiv](https://arxiv.org/abs/1803.02781) | [Code](https://github.com/GoodDeeds/Fast-Dawid-Skene) | [Supplementary Results](https://sites.google.com/view/fast-dawid-skene/supplementary-results)
 
 Implementation of the Fast Dawid-Skene and Hybrid algorithms described in the paper:
 
