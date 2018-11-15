@@ -10,5 +10,5 @@ install:
 
 script:
   - py.test
-  - python scripts/fast_dawid_skene.py --dataset toy --k 2 --mode aggregate --algorithm FDS --print_result
-  - python scripts/fast_dawid_skene.py --dataset toy --mode aggregate --algorithm FDS --print_result
+  - python scripts/fast_dawid_skene.py --dataset toy --k 2 --mode aggregate --algorithm FDS --print_result --verbose
+  - python scripts/fast_dawid_skene.py --dataset toy --mode aggregate --algorithm FDS --print_result --verbose
