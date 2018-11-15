@@ -19,6 +19,8 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 DEALINGS IN THE SOFTWARE.
 """
 
+from __future__ import print_function
+
 import numpy as np
 
 
@@ -96,7 +98,7 @@ def run(responses, args, tol=0.0001, CM_tol=0.005, max_iter=100):
     # total_time = 0
 
     if args.verbose:
-        print "Iter\tlog-likelihood\tdelta-CM\tdelta-ER"
+        print("Iter\tlog-likelihood\tdelta-CM\tdelta-ER")
 
     while not converged:
         nIter += 1
@@ -123,24 +125,25 @@ def run(responses, args, tol=0.0001, CM_tol=0.005, max_iter=100):
                 np.abs(class_marginals - old_class_marginals))
             error_rates_diff = np.sum(np.abs(error_rates - old_error_rates))
             if args.verbose:
-                print nIter, '\t', log_L, '\t%.6f\t%.6f' % (class_marginals_diff, error_rates_diff)
+                print(nIter, '\t', log_L, '\t%.6f\t%.6f' %
+                      (class_marginals_diff, error_rates_diff))
             if (class_marginals_diff < tol) or nIter >= max_iter:
                 converged = True
             elif (mode == 'H' and class_marginals_diff <= CM_tol):
                 if args.verbose:
-                    print "Mode changed to Hphase2"
+                    print("Mode changed to Hphase2")
                 mode = 'Hphase2'
         else:
             if args.verbose:
-                print nIter, '\t', log_L
+                print(nIter, '\t', log_L)
 
         old_class_marginals = class_marginals
         old_error_rates = error_rates
 
     np.set_printoptions(precision=2, suppress=True)
     if args.verbose:
-        print "Class marginals"
-        print class_marginals
+        print("Class marginals")
+        print(class_marginals)
 
     result = np.argmax(question_classes, axis=1)
 
@@ -161,7 +164,7 @@ def responses_to_counts(responses):
         counts: 3d array of counts: [questions x participants x classes]
     """
     questions = responses.keys()
-    questions.sort()
+    questions = sorted(questions)
     nQuestions = len(questions)
 
     # determine the participants and classes
@@ -367,7 +370,7 @@ def calc_likelihood(counts, class_marginals, error_rates):
 
         if np.isnan(temp) or np.isinf(temp):
             if args.verbose:
-                print i, log_L, np.log(patient_likelihood), temp
+                print(i, log_L, np.log(patient_likelihood), temp)
             sys.exit()
 
         log_L = temp
