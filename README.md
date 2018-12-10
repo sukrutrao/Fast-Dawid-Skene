@@ -65,11 +65,14 @@ This code is provided under the [MIT License](LICENSE).
 
 Some parts of the code in [this file](fast_dawid_skene/algorithms.py) are derived from [this implementation](https://github.com/dallascard/dawid_skene), and the original license and copyright notice can be found at the top of the file.
 
+## Citation
+If the Fast Dawid-Skene / Hybrid algorithms are useful for your research, please cite our paper [2] ([References](#references)).
+
 ## Acknowledgements
 Parts of the code for the implementation of the algorithms use or derive from code in [this implementation](https://github.com/dallascard/dawid_skene).
 
 ## References
 
 1. A. P. Dawid and A. M. Skene. 1979. Maximum Likelihood Estimation of Observer Error-Rates Using the EM Algorithm. J. Royal Stat. Soc. Series C 28, 1 (1979), 20–28.
-2. Vaibhav B Sinha, Sukrut Rao, Vineeth N Balasubramanian. Fast Dawid-Skene: A Fast Vote Aggregation Scheme for Sentiment Classification. KDD WISDOM 2018.
+2. Vaibhav B Sinha, Sukrut Rao, Vineeth N Balasubramanian. Fast Dawid-Skene: A Fast Vote Aggregation Scheme for Sentiment Classification. In Workshop on Issues of Sentiment Discovery and Opinion Mining (WISDOM) at the ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD) 2018, August 2018.
 
