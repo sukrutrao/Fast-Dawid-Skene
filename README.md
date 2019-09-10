@@ -1,9 +1,9 @@
 # Fast Dawid-Skene
-[![Build Status](https://travis-ci.com/GoodDeeds/Fast-Dawid-Skene.svg?branch=master)](https://travis-ci.com/GoodDeeds/Fast-Dawid-Skene) 
-[![GitHub](https://img.shields.io/github/license/GoodDeeds/Fast-Dawid-Skene.svg)](LICENSE)
+
+[![GitHub](https://img.shields.io/github/license/sukrutrao/Fast-Dawid-Skene.svg)](LICENSE)
 
 
-[Paper](http://sentic.net/wisdom2018sinha.pdf) | [arXiv](https://arxiv.org/abs/1803.02781) | [Code](https://github.com/GoodDeeds/Fast-Dawid-Skene) | [Slides](https://drive.google.com/file/d/1GgtvDsD0i4uAwaGHxufuCrxBZ7rCPPlW/view?usp=sharing) | [Supplementary Results](https://sites.google.com/view/fast-dawid-skene/supplementary-results)
+[Paper](http://sentic.net/wisdom2018sinha.pdf) | [arXiv](https://arxiv.org/abs/1803.02781) | [Code](https://github.com/sukrutrao/Fast-Dawid-Skene) | [Slides](https://drive.google.com/file/d/1GgtvDsD0i4uAwaGHxufuCrxBZ7rCPPlW/view?usp=sharing) | [Supplementary Results](https://sites.google.com/view/fast-dawid-skene/supplementary-results)
 
 Implementation of the Fast Dawid-Skene and Hybrid algorithms described in the paper:
 
