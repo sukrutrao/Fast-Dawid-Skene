@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If the Fast Dawid-Skene / Hybrid algorithms are useful for your research, please cite our paper as below."
+preferred-citation:
+  authors:
+    - family-names: Sinha
+      given-names: Vaibhav B
+      orcid: "https://orcid.org/0000-0003-3499-6136"
+    - family-names: Rao
+      given-names: Sukrut
+      orcid: "https://orcid.org/0000-0001-8896-7619"
+    - family-names: Balasubramanian
+      given-names: Vineeth N
+      orcid: "https://orcid.org/0000-0003-2656-0375"
+  title: "Fast Dawid-Skene: A Fast Vote Aggregation Scheme for Sentiment Classification"
+  type: article
+  journal: arXiv preprint arXiv:1803.02781
+  year: 2018
